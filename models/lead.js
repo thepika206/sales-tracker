@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const leadSchema = new Schema({
   name: String, 
   owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
-  //!basic setup for stubbing
+  //basic setup for stubbing
   //description: String,
   // status: {
   //   type:String,
