@@ -46,3 +46,7 @@ main {
   margin-left: auto;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}

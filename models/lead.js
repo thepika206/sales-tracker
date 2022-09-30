@@ -6,7 +6,7 @@ const leadSchema = new Schema({
   name: String, 
   owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
   //basic setup for stubbing
-  //description: String,
+  description: String,
   // status: {
   //   type:String,
   //   enum: ['Closed-Won', 'Closed-Lost', 'Action-Needed', 'Waiting-for-Customer'],
