@@ -11,8 +11,8 @@ const router = Router()
 // GET /leads/new
 router.get('/new', isLoggedIn, leadCtrl.new)
 
-// // POST /leads
-// router.post('/', leadCtrl.create)
+// POST /leads
+router.post('/', isLoggedIn, leadCtrl.create)
 
 
 
