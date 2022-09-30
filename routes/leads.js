@@ -8,15 +8,18 @@ const router = Router()
 
 
 //============routes==============
-// GET /leads/new
-router.get('/new', isLoggedIn, leadCtrl.new)
-
-// POST /leads
-router.post('/', isLoggedIn, leadCtrl.create)
 
 // GET /leads
 router.get('/', isLoggedIn, leadCtrl.index)
 
+// GET /leads/new
+router.get('/new', isLoggedIn, leadCtrl.new)
+
+// GET /leads/:leadId
+router.get('/:leadId', isLoggedIn, leadCtrl.show)
+
+// POST /leads
+router.post('/', isLoggedIn, leadCtrl.create)
 
 
 

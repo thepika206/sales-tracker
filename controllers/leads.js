@@ -11,7 +11,16 @@ function index(req,res){
   )
 }
 
-
+function show(req,res){
+  console.log('show san check!!!')
+  Lead.findById(req.params.leadId)
+  .populate('owner')
+  .then(lead => {
+    res.render('leads/show',{
+      lead: lead,
+    })
+  })
+}
 
 function newLead(req,res){
   res.render('leads/new')
@@ -32,6 +41,7 @@ function create(req,res){
 
 export {
   index,
+  show,
   newLead as new,
   create,
 }

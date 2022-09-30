@@ -18,7 +18,7 @@
       <% leads.forEach((lead, idx) => { %>
         <tr>
           <th scope="row"><%= idx %></th>
-          <td><%= lead.name %></td>
+          <td> <a href="/leads/<%= lead._id %>"> <%= lead.name %> </a> </td>
           <td><%= lead.owner.name %></td>
           <td>TBD</td>
         </tr>
