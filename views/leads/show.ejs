@@ -9,7 +9,7 @@
   <p>Description:</p>
   <p> <%= lead.description %>  </p>
   <% if (lead.owner.equals(user?.profile.id)) { %>   
-    <form action="/leads/<%= lead._id %>" method="GET">
+    <form action="/leads/<%= lead._id %>/edit" method="GET">
       <button type="submit" class="btn btn-secondary"> Edit Lead </button>
     </form>
     <% } %>

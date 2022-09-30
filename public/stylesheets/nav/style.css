@@ -1,0 +1,5 @@
+.active-page {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  font-weight: 600;
+}

@@ -6,6 +6,7 @@ function index(req,res){
   .then(leads => {
     res.render('leads/index', {
       leads: leads,
+      title: 'Leads',
     })
   }
   )
@@ -18,12 +19,15 @@ function show(req,res){
   .then(lead => {
     res.render('leads/show',{
       lead: lead,
+      title: 'Lead Details',
     })
   })
 }
 
 function newLead(req,res){
-  res.render('leads/new')
+  res.render('leads/new',{
+    title: 'New Lead',
+  })
 }
 
 function create(req,res){
