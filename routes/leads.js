@@ -14,7 +14,8 @@ router.get('/new', isLoggedIn, leadCtrl.new)
 // POST /leads
 router.post('/', isLoggedIn, leadCtrl.create)
 
-
+// GET /leads
+router.get('/', isLoggedIn, leadCtrl.index)
 
 
 

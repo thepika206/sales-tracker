@@ -1,0 +1,30 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>lead index test</h1>
+  
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Agent</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% leads.forEach((lead, idx) => { %>
+        <tr>
+          <th scope="row"><%= idx %></th>
+          <td><%= lead.name %></td>
+          <td><%= lead.owner.name %></td>
+          <td>TBD</td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</main>
+
+<%- include('../partials/footer') %>

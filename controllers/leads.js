@@ -1,5 +1,18 @@
 import { Lead } from "../models/lead.js";
 
+function index(req,res){
+  Lead.find({})
+  .populate('owner')
+  .then(leads => {
+    res.render('leads/index', {
+      leads: leads,
+    })
+  }
+  )
+}
+
+
+
 function newLead(req,res){
   res.render('leads/new')
 }
@@ -18,6 +31,7 @@ function create(req,res){
 }
 
 export {
+  index,
   newLead as new,
   create,
 }
