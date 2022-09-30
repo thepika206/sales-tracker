@@ -18,9 +18,14 @@ router.get('/new', isLoggedIn, leadCtrl.new)
 // GET /leads/:leadId
 router.get('/:leadId', isLoggedIn, leadCtrl.show)
 
+// GET /leads/:leadId/edit
+router.get('/:leadId/edit', isLoggedIn, leadCtrl.edit)
+
 // POST /leads
 router.post('/', isLoggedIn, leadCtrl.create)
 
+// PUT /leads/:leadId
+router.put('/:leadId', isLoggedIn, leadCtrl.update)
 
 
 

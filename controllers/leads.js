@@ -13,7 +13,6 @@ function index(req,res){
 }
 
 function show(req,res){
-  console.log('show san check!!!')
   Lead.findById(req.params.leadId)
   .populate('owner')
   .then(lead => {
@@ -21,6 +20,10 @@ function show(req,res){
       lead: lead,
       title: 'Lead Details',
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
   })
 }
 
@@ -31,11 +34,43 @@ function newLead(req,res){
 }
 
 function create(req,res){
-  console.log(req.user.profile._id, "user profile!!!")
   req.body.owner = req.user.profile._id
   Lead.create(req.body)
   .then(lead => {
     res.redirect('/leads/new')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function edit(req,res){
+  Lead.findById(req.params.leadId)
+  .populate('owner')
+  .then(lead => {
+    res.render('leads/edit',{
+      lead: lead,
+      title: 'Edit Lead',
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function update(req,res){
+  Lead.findById(req.params.leadId)
+  .then(lead => {
+    if (lead.owner.equals(req.user.profile._id)){
+      lead.updateOne(req.body)
+      .then(()=>{
+        res.redirect(`/leads/${req.params.leadId}`)
+      })
+    } else {
+      throw new Error('not authorized')
+    }
   })
   .catch(err => {
     console.log(err)
@@ -48,4 +83,6 @@ export {
   show,
   newLead as new,
   create,
+  edit,
+  update,
 }

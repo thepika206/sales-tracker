@@ -2,17 +2,17 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1> New Lead </h1>
-  <form action="/leads" method="POST">
+  <h1> Edit Lead </h1>
+  <form action="/leads/<%= lead._id %>?_method=PUT" method="POST">
     <div class="mb-3">
       <label for="name" class="form-label">Lead Name</label>
-      <input name="name" type="text" class="form-control" id="name" placeholder="John Doe" autocomplete="off">
+      <input name="name" value="<%= lead.name %>" type="text" class="form-control" id="name" placeholder="John Doe" autocomplete="off">
     </div>
     <div class="mb-3">
       <label for="description" class="form-label">Lead Description</label>
-      <textarea name="description" class="form-control" id="description" rows="3" placeholder="briefly describe the stated needs for the customer"></textarea>
+      <textarea name="description" class="form-control" id="description" rows="3" placeholder="briefly describe the stated needs for the customer"> <%= lead.description %> </textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Create Lead</button>
+    <button type="submit" class="btn btn-primary">Save</button>
   </form>
   
 </main>
