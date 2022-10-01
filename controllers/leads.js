@@ -101,6 +101,26 @@ function deleteLead(req,res){
   })
 }
 
+function createComment(req,res){
+  req.body.author = req.user.profile._id
+  Lead.findById(req.params.leadId)
+  .then(lead =>{
+    lead.comments.push(req.body)
+    lead.save()
+    .then(()=>{
+      res.redirect(`/leads/${req.params.leadId}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   index,
   show,
@@ -108,5 +128,6 @@ export {
   create,
   edit,
   update,
-  deleteLead as delete
+  deleteLead as delete,
+  createComment,
 }

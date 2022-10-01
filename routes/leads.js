@@ -30,6 +30,9 @@ router.put('/:leadId', isLoggedIn, leadCtrl.update)
 // DELETE /leads/:leadId
 router.delete('/:leadId', isLoggedIn, leadCtrl.delete)
 
+// ADD COMMENTS POST /lead/:leadId/comments
+router.post('/:leadId/comments', isLoggedIn, leadCtrl.createComment)
+
 
 export {
   router
