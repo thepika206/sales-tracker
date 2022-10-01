@@ -78,6 +78,24 @@ function update(req,res){
   })
 }
 
+function deleteLead(req,res){
+  Lead.findById(req.params.leadId)
+  .then(lead => {
+    if (lead.owner.equals(req.user.profile._id)){
+      Lead.findByIdAndDelete(req.params.leadId)
+      .then((lead)=>{
+        res.redirect(`/leads`)
+      })
+    } else {
+      throw new Error('not authorized')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export {
   index,
   show,
@@ -85,4 +103,5 @@ export {
   create,
   edit,
   update,
+  deleteLead as delete
 }

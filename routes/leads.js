@@ -27,7 +27,8 @@ router.post('/', isLoggedIn, leadCtrl.create)
 // PUT /leads/:leadId
 router.put('/:leadId', isLoggedIn, leadCtrl.update)
 
-
+// DELETE /leads/:leadId
+router.delete('/:leadId', isLoggedIn, leadCtrl.delete)
 
 
 export {

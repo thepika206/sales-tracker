@@ -9,8 +9,13 @@
   <p>Description:</p>
   <p> <%= lead.description %>  </p>
   <% if (lead.owner.equals(user?.profile.id)) { %>   
+    <!-- the owner may edit the lead -->
     <form action="/leads/<%= lead._id %>/edit" method="GET">
-      <button type="submit" class="btn btn-secondary"> Edit Lead </button>
+      <button type="submit" class="btn btn-secondary mb-3"> Edit Lead </button>
+    </form>
+    <!-- the owner may delete the lead -->
+    <form action="/leads/<%= lead._id %>?_method=DELETE" method="POST">
+      <button type="submit" class="btn btn-secondary"> Delete Lead </button>
     </form>
     <% } %>
 </main>
