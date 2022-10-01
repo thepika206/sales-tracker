@@ -17,10 +17,10 @@
     <tbody>
       <% leads.forEach((lead, idx) => { %>
         <tr>
-          <th scope="row"><%= idx %></th>
+          <th scope="row"><%= idx+1 %></th>
           <td> <a href="/leads/<%= lead._id %>"> <%= lead.name %> </a> </td>
           <td><%= lead.owner.name %></td>
-          <td>TBD</td>
+          <td><%= lead.status %> </td>
         </tr>
       <% }) %>
     </tbody>

@@ -7,11 +7,11 @@ const leadSchema = new Schema({
   owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
   //basic setup for stubbing
   description: String,
-  //status: String,
-  //{
-  //   type:String,
-  //   enum: ['Closed-Won', 'Closed-Lost', 'Action-Needed', 'Waiting-for-Customer'],
-  //   }
+  status: {
+    type:String, 
+    default: 'New',
+    enum: ['New', 'Working', 'Closed' ]
+  },
   //value: Number,
   //comments: [commentSchema],
 }, {

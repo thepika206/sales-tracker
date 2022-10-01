@@ -37,7 +37,7 @@ function create(req,res){
   req.body.owner = req.user.profile._id
   Lead.create(req.body)
   .then(lead => {
-    res.redirect('/leads/new')
+    res.redirect(`/leads/${lead._id}`)
   })
   .catch(err => {
     console.log(err)
@@ -64,9 +64,14 @@ function update(req,res){
   Lead.findById(req.params.leadId)
   .then(lead => {
     if (lead.owner.equals(req.user.profile._id)){
-      lead.updateOne(req.body)
+      const opts = { runValidators: true }
+      lead.updateOne(req.body, opts)
       .then(()=>{
         res.redirect(`/leads/${req.params.leadId}`)
+      })
+      .catch(err => {
+        console.log(err)
+        res.redirect('/')
       })
     } else {
       throw new Error('not authorized')
