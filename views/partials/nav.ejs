@@ -5,30 +5,21 @@
 </head>
 <body>
   <!-- <nav class="navbar navbar-expand-md bg-light mb-3"> -->
-  <nav class="navbar navbar-expand-sm bg-light mb-3">
+  <nav class="nav mb-3 p-1">
     <% if (user) { %>
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/leads">Sales Tracker</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link disabled <%= title === 'Home'? "active-page" : "" %>" href="/">Home</a>
-            <a class="nav-link <%= title === 'Leads'? "active-page" : "" %>" href="/leads">Leads</a>
-            <a class="nav-link <%= title === 'New Lead'? "active-page" : "" %>" href="/leads/new">New Lead</a>
-          </div>
-        </div>
-      </div>
-      <div>
+      <a class="navbar-brand" href="/leads">Sales Tracker</a>
+      <a class="nav-link <%= title === 'Leads'? "active-page" : "" %>" href="/leads">Leads</a>
+      <a class="nav-link <%= title === 'New Lead'? "active-page" : "" %>" href="/leads/new">New Lead</a>
+      <div class="nav-item right mt-2">
         <img
           src="<%= user.profile.avatar %>"
           alt="<%= user.profile.name %> avatar"
+          class="small-round-avatar"
         />
+        <a href="/auth/logout" class="right">
+          <button class="btn btn-sm ms-3 btn-secondary" type="submit">Logout</button>
+        </a>
       </div>
-      <a href="/auth/logout" class="right">
-        <button class="btn btn-danger" type="submit">Logout</button>
-      </a>
     <% } else { %>
       <div 
         id="g_id_onload"
