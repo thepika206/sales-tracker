@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  background-color: #1a1a1a;
-  color: #f6f6f6;
+  background-color: whitesmoke;
+  color: black;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
@@ -49,4 +49,9 @@ main {
 form {
   display: flex;
   flex-direction: column;
+}
+
+div.card {
+  width: 90%;
+  max-width: 800px
 }
