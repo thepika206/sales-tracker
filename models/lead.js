@@ -3,16 +3,20 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const leadSchema = new Schema({
-  name: {type: String, required: true },
+  name: {type: String, required: [true, 'name is required'] },
   owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
   //basic setup for stubbing
   description: String,
   status: {
-    type:String, 
+    type: String, 
     default: 'New',
     enum: ['New', 'Working', 'Closed' ]
   },
-  //value: Number,
+  value: {
+    type: Number,
+    default: 0,
+    min: [0, 'value must be a postive amount'],
+  },
   //comments: [commentSchema],
 }, {
   timestamps: true,

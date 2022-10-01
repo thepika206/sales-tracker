@@ -12,11 +12,14 @@
         <option value="Closed">Closed</option>
       </select>
     </label>
-    <label class="form-label mb-3">Lead Name
-      <input name="name" value="<%= lead.name %>" type="text" class="form-control" id="name" placeholder="John Doe" autocomplete="off">
+    <label class="form-label mb-3">Lead Value ($)
+      <input name="value" value="<%= lead.value %>" type="number" min="0" class="form-control" placeholder="Enter Amount" autocomplete="off">
     </label>
-    <label for="description" class="form-label mb-3">Lead Description
-      <textarea name="description" class="form-control" id="description" rows="3" placeholder="briefly describe the stated needs for the customer"> <%= lead.description %> </textarea>
+    <label class="form-label mb-3">Lead Name
+      <input name="name" value="<%= lead.name %>" type="text" class="form-control" placeholder="John Doe" autocomplete="off">
+    </label>
+    <label class="form-label mb-3">Lead Description
+      <textarea name="description" class="form-control" rows="3" placeholder="briefly describe the stated needs for the customer"><%= lead.description %></textarea>
     </label>
     <button type="submit" class="btn btn-primary mt-3">Save</button>
   </form>

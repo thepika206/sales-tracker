@@ -12,6 +12,7 @@
         <th scope="col">Name</th>
         <th scope="col">Agent</th>
         <th scope="col">Status</th>
+        <th scope="col">Value</th>
       </tr>
     </thead>
     <tbody>
@@ -21,6 +22,7 @@
           <td> <a href="/leads/<%= lead._id %>"> <%= lead.name %> </a> </td>
           <td><%= lead.owner.name %></td>
           <td><%= lead.status %> </td>
+          <td>$<%= lead.value %> </td>
         </tr>
       <% }) %>
     </tbody>

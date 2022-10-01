@@ -2,15 +2,19 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1 class="mb-3"> Details - <%= lead.name  %>  </h1>
+  <h1 class="mb-3"> Lead Details </h1>
   
     <div class="card mb-3">
-      <h5 class="card-header">Lead Information </h5>
+      <h4 class="card-header">Lead Information - <%= lead.name %> </h4>
       <div class="card-body">
         <h5 class="card-title"> Status </h5>
         <p class="card-text"> <%= lead.status %> </p>
+        <h5 class="card-title"> Value </h5>
+        <p class="card-text"> $ <%= lead.value %> </p>
         <h5 class="card-title"> Assigned Owner </h5>
         <p class="card-text"> <%= lead.owner.name %> </p>
+        <h5 class="card-title"> Lead Name </h5>
+        <p class="card-text"> <%= lead.name %> </p>
         <h5 class="card-title"> Description </h5>
         <% if (!lead.description) { %>
           <p class="card-text"> no description provided </p>
