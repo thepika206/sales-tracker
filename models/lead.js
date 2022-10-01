@@ -3,11 +3,12 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const leadSchema = new Schema({
-  name: String, 
+  name: {type: String, required: true },
   owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
   //basic setup for stubbing
   description: String,
-  // status: {
+  //status: String,
+  //{
   //   type:String,
   //   enum: ['Closed-Won', 'Closed-Lost', 'Action-Needed', 'Waiting-for-Customer'],
   //   }
