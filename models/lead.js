@@ -2,6 +2,17 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const commentSchema = new Schema({
+  content: {
+    type: String,
+    required: true
+  },
+  author: { type: Schema.Types.ObjectId, ref: 'Profile' },
+},{
+  timestamps: true
+})
+
+
 const leadSchema = new Schema({
   name: {type: String, required: [true, 'name is required'] },
   owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
@@ -17,7 +28,7 @@ const leadSchema = new Schema({
     default: 0,
     min: [0, 'value must be a postive amount'],
   },
-  //comments: [commentSchema],
+  comments: [commentSchema],
 }, {
   timestamps: true,
 })
