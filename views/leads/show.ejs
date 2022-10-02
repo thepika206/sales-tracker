@@ -22,7 +22,10 @@
         <h5 class="card-title"> Value </h5>
         <p class="card-text"> $ <%= lead.value %> </p>
         <h5 class="card-title"> Assigned Owner </h5>
-        <p class="card-text"> <%= lead.owner.name %> </p>
+        <div class="mb-3 d-flex flex-row justify-content-start">
+          <img src="<%= lead.owner.avatar %>" alt="" class="small-round-avatar">
+          <p class="card-text"> <%= lead.owner.name %> </p>
+        </div>
         <h5 class="card-title"> Name </h5>
         <p class="card-text"> <%= lead.name %> </p>
         <h5 class="card-title"> Description </h5>
