@@ -5,7 +5,7 @@
   <h1 class="mb-3"> Lead Details </h1>
   <section id="lead-details" class="container-sm">
     <div class="card mb-3 ">
-      <h4 class="card-header">Lead Information - <%= lead.name %> </h4>
+      <h4 class="card-header">Lead Information</h4>
       <div class="card-body">
         <% if (lead.owner.equals(user?.profile.id)) { %>   
           <div class="d-flex justify-content-start mb-3">
@@ -17,6 +17,8 @@
             </form>
           </div>
         <% } %>
+        <h6 class="card-title"> Name </h6>
+        <p class="card-text"> <%= lead.name %> </p>
         <h6 class="card-title"> Status </h6>
         <p class="card-text"> <%= lead.status %> </p>
         <h6 class="card-title"> Value </h6>
@@ -26,8 +28,6 @@
           <img src="<%= lead.owner.avatar %>" alt="" class="small-round-avatar">
           <p class="card-text"> <%= lead.owner.name %> </p>
         </div>
-        <h6 class="card-title"> Name </h6>
-        <p class="card-text"> <%= lead.name %> </p>
         <h6 class="card-title"> Description </h6>
         <% if (!lead.description) { %>
           <p class="card-text"> no description provided </p>
