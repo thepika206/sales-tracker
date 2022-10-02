@@ -2,8 +2,10 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %></h1>
-  <p>Click the lead name to manage it</p>
+  <h1><%= title %> <%= subtitle %></h1>
+  <% if (subtitle === '(Open)') { %>
+    <p><a href="/leads/my-leads">Include Closed Leads</a></p>
+  <% } %>
   <table class="table">
     <thead>
       <tr>

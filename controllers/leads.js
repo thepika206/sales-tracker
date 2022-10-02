@@ -7,6 +7,7 @@ function index(req,res){
     res.render('leads/index', {
       leads: leads,
       title: 'Leads',
+      subtitle: '',
     })
   })
   .catch(err => {
@@ -24,6 +25,26 @@ function indexMyLeads(req,res){
     res.render('leads/index', {
       leads: leads,
       title: 'My Leads',
+      subtitle: '(All-Statuses)',
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function indexMyLeadsOpen(req,res){
+  Lead.find({
+    owner: req.user.profile._id,
+    status: ['New','Working',]
+  })
+  .populate('owner')
+  .then(leads => {
+    res.render('leads/index', {
+      leads: leads,
+      title: 'My Leads',
+      subtitle: '(Open)'
     })
   })
   .catch(err => {
@@ -150,6 +171,7 @@ function createComment(req,res){
 export {
   index,
   indexMyLeads,
+  indexMyLeadsOpen,
   show,
   newLead as new,
   create,

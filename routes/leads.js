@@ -15,6 +15,9 @@ router.get('/', isLoggedIn, leadCtrl.index)
 // GET /leads/my-leads
 router.get('/my-leads', isLoggedIn, leadCtrl.indexMyLeads)
 
+// GET /leads/my-leads-open
+router.get('/my-leads-open', isLoggedIn, leadCtrl.indexMyLeadsOpen)
+
 // GET /leads/new
 router.get('/new', isLoggedIn, leadCtrl.new)
 
