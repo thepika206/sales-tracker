@@ -14,6 +14,13 @@
             <label for="name" class="form-label">Name</label>
             <input name="name" required type="text" class="form-control" id="name" placeholder="Full Name" autocomplete="off">
           </div>
+          <label class="mb-3"> Status 
+            <select name="status" class="form-select" aria-label="Lead Status">
+              <option value="New" selected>New</option>
+              <option value="Working">Working</option>
+              <option value="Closed">Closed</option>
+            </select>
+          </label>
           <div class="mb-3">
             <label for="value" class="form-label">Value</label>
             <input name="value" type="number" class="form-control" id="value" placeholder="Estimated Deal Value" autocomplete="off">
