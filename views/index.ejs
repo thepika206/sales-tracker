@@ -1,26 +1,20 @@
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 <main>
-  <h1>Welcome to Sales Tracker, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-      src="<%= user.profile.avatar %>"
-      alt="<%= user.profile.name %> avatar"
-      />
-    </div>      
-  <% } %>
-  <% if (user) { %>
-    <h3>Get Started</h3>
-    <h5>Start by adding a <a href="/leads/new">New Lead</a>.  Then check out <a href="/leads/my-leads">My Leads</a> to see the deals you can work on.</h5>
+  <section>
+    <h1>Welcome to Sales Tracker, <%= user ? user.profile.name : "friend" %></h1>
+    <% if (user) { %>
+      <h5>Let's 'Suite Up' first by adding a <a href="/leads/new">New Lead</a>.</h5>
+      <img id="home-splash-image" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="person buttoning a suit jacket">
+      <h5>Then check out <a href="/leads/my-leads">My Leads</a> to see the deals you can work on.</h5>
     <% } else { %>
       <h3>Get Started</h3>
       <p>Please click "Sign in with Google" on the upper right side</p>
       <img id="home-splash-image" src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="two people having a business meeting outside">
-    <h5>Note:</h5>
-    <p>The Sales Tracker app will access your name, email, and profile avatar. </p>
-    <p>It will NOT access any documents, photos nor contacts</p>
-  <% } %>
+      <h5>Note:</h5>
+      <p>The Sales Tracker app will access your name, email, and profile avatar. </p>
+      <p>It will NOT access any documents, photos nor contacts</p>
+    <% } %>
+  </section>
 </main>
-
 <%- include('./partials/footer') %>
