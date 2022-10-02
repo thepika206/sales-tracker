@@ -15,6 +15,23 @@ function index(req,res){
   })
 }
 
+function indexMyLeads(req,res){
+  Lead.find({
+    owner: req.user.profile._id
+  })
+  .populate('owner')
+  .then(leads => {
+    res.render('leads/index', {
+      leads: leads,
+      title: 'My Leads',
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 function show(req,res){
   Lead.findById(req.params.leadId)
   .populate('owner')
@@ -94,7 +111,7 @@ function deleteLead(req,res){
     if (lead.owner.equals(req.user.profile._id)){
       Lead.findByIdAndDelete(req.params.leadId)
       .then((lead)=>{
-        res.redirect(`/leads`)
+        res.redirect(`/leads/my-leads`)
       })
         .catch(err => {
     console.log(err)
@@ -132,6 +149,7 @@ function createComment(req,res){
 
 export {
   index,
+  indexMyLeads,
   show,
   newLead as new,
   create,

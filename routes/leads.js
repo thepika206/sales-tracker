@@ -12,6 +12,9 @@ const router = Router()
 // GET /leads
 router.get('/', isLoggedIn, leadCtrl.index)
 
+// GET /leads/my-leads
+router.get('/my-leads', isLoggedIn, leadCtrl.indexMyLeads)
+
 // GET /leads/new
 router.get('/new', isLoggedIn, leadCtrl.new)
 

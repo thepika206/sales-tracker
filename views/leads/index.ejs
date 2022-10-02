@@ -2,9 +2,7 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>Leads</h1>
-  
-  
+  <h1><%= title %></h1>
   <table class="table">
     <thead>
       <tr>
@@ -16,17 +14,30 @@
       </tr>
     </thead>
     <tbody>
-      <% leads.forEach((lead, idx) => { %>
+      <% if (leads.length > 0) { %>
+        <% leads.forEach((lead, idx) => { %>
+          <tr>
+            <td scope="row"><%= idx+1 %></td>
+            <td> <a href="/leads/<%= lead._id %>"> <%= lead.name %> </a> </td>
+            <td><%= lead.owner.name %></td>
+            <td><%= lead.status %> </td>
+            <td>$<%= lead.value %> </td>
+          </tr>
+        <% }) %>
+      <% } else { %>
         <tr>
-          <th scope="row"><%= idx+1 %></th>
-          <td> <a href="/leads/<%= lead._id %>"> <%= lead.name %> </a> </td>
-          <td><%= lead.owner.name %></td>
-          <td><%= lead.status %> </td>
-          <td>$<%= lead.value %> </td>
+          <td></td>
+          <td></td>
+          <td>You have no Leads - Please enter some <a href="/leads/new">New Leads</a></td>
+          <td></td>
+          <td></td>
         </tr>
-      <% }) %>
+      <% } %>
     </tbody>
   </table>
+        
+      
+
 </main>
 
 <%- include('../partials/footer') %>
