@@ -2,23 +2,29 @@
 <%- include('../partials/nav') %>
 
 <main>
+  <h1> New Lead </h1>
   <section>
-    <h1> New Lead </h1>
-    <form action="/leads" method="POST">
-      <!-- Lead Name -->
-      <div class="mb-3">
-        <label for="name" class="form-label">Lead Name</label>
-        <input name="name" required type="text" class="form-control" id="name" placeholder="Full Name" autocomplete="off">
+    <div class="card mb-3">
+      <h4 class="card-header">Lead Information</h4>
+      <div class="card-body">
+        
+        <form action="/leads" method="POST">
+          <!-- Lead Name -->
+          <div class="mb-3">
+            <label for="name" class="form-label">Lead Name</label>
+            <input name="name" required type="text" class="form-control" id="name" placeholder="Full Name" autocomplete="off">
+          </div>
+          <!-- Lead Description -->
+          <div class="mb-3">
+            <label for="description" class="form-label">Lead Description</label>
+            <textarea name="description" class="form-control" id="description" rows="3" placeholder="client needs, any special notes for handling"></textarea>
+          </div>
+          <!-- Save button to create the lead -->
+          <button type="submit" class="btn btn-primary">Create Lead</button>
+          
+        </form>
       </div>
-      <!-- Lead Description -->
-      <div class="mb-3">
-        <label for="description" class="form-label">Lead Description</label>
-        <textarea name="description" class="form-control" id="description" rows="3" placeholder="client needs, any special notes for handling"></textarea>
-      </div>
-      <!-- Save button to create the lead -->
-      <button type="submit" class="btn btn-primary">Create Lead</button>
-      
-    </form>
+    </div>
   </section>
 </main>
 
