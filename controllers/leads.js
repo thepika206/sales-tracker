@@ -8,8 +8,11 @@ function index(req,res){
       leads: leads,
       title: 'Leads',
     })
-  }
-  )
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 function show(req,res){
@@ -93,6 +96,10 @@ function deleteLead(req,res){
       .then((lead)=>{
         res.redirect(`/leads`)
       })
+        .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
     } else {
       throw new Error('not authorized')
     }
