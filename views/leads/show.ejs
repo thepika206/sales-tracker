@@ -8,12 +8,12 @@
       <h4 class="card-header">Lead Information - <%= lead.name %> </h4>
       <div class="card-body">
         <% if (lead.owner.equals(user?.profile.id)) { %>   
-          <div class="d-flex mb-3">
+          <div class="d-flex justify-content-start mb-3">
+            <form action="/leads/<%= lead._id %>/edit" method="GET">
+              <button type="submit" class="btn btn-primary ms-3"> Edit Lead </button>
+            </form>
             <form action="/leads/<%= lead._id %>?_method=DELETE" method="POST">
               <button type="submit" class="btn btn-danger ms-3"> Delete Lead </button>
-            </form>
-            <form action="/leads/<%= lead._id %>/edit" method="GET">
-              <button type="submit" class="btn btn-secondary ms-3"> Edit Lead </button>
             </form>
           </div>
         <% } %>
@@ -38,12 +38,25 @@
     <div class="card mb-3 ">
       <h4 class="card-header">Comments</h4>
       <div class="card-body">
-        <form action="/leads/<%= lead._id %>/comments" method="POST">
-          <textarea name="content" id="" cols="60" rows="3"></textarea>
-          <button type="submit" class="btn btn-secondary "> Add Comment </button>
-        </form>
-  
 
+          <% lead.comments.forEach(comment => { %>
+            <div class="mb-3 d-flex justify-content-start">
+              <div>
+                <img src="<%= comment.author.avatar %>" alt="" class="small-round-avatar">
+              </div>
+              <div class="ms-3">
+                <p><%= comment.content %></p>
+                <p>Posted by - <%= comment.author.name %> - <%= comment.createdAt %></p> 
+              </div>
+            </div>
+          <% }) %>
+
+        <form action="/leads/<%= lead._id %>/comments" method="POST" class="mb-3">
+          <textarea name="content" id="" cols="60" rows="3" required></textarea>
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary mt-3"> Add Comment </button>
+          </div>
+        </form>
       </div>
     </div>
   </section>

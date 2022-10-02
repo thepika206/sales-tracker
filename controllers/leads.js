@@ -15,7 +15,9 @@ function index(req,res){
 function show(req,res){
   Lead.findById(req.params.leadId)
   .populate('owner')
+  .populate('comments.author')
   .then(lead => {
+    // console.log(comments.author,'author???')
     res.render('leads/show',{
       lead: lead,
       title: 'Lead Details',
