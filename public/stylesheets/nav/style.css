@@ -6,8 +6,29 @@
 
 .navbar-brand {
   font-size: 24px;
+  margin-left: 10px;
 }
 
 .nav-link {
-  font-size: 22px;
+  margin: 6px 8px;
+  font-size: 18px;
+}
+
+@media only screen and (max-width:649px) {
+  .navbar {
+    color: red;
+    justify-content: flex-end;
+  }
+  .navbar-brand {
+    font-size: 16px;
+    padding: 0;
+    margin: 5px 5px;
+  }
+  .nav-link {
+    padding: 0;
+    margin: 5px 5px;
+  }
+  nav img {
+    display: none;
+  }
 }
