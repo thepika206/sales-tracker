@@ -61,7 +61,7 @@ function show(req,res){
     // console.log(comments.author,'author???')
     res.render('leads/show',{
       lead: lead,
-      title: 'Lead Details',
+      title: `Lead Details for ${lead.name}`,
     })
   })
   .catch(err => {
@@ -94,7 +94,7 @@ function edit(req,res){
   .then(lead => {
     res.render('leads/edit',{
       lead: lead,
-      title: 'Edit Lead',
+      title: `Edit ${lead.name}`,
     })
   })
   .catch(err => {
