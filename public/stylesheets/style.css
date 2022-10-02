@@ -45,6 +45,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: white;
 }
 
 .right {
@@ -63,4 +64,8 @@ div.card {
 
 section {
   width: 90%;
+}
+
+h1 {
+  /* color: white; */
 }

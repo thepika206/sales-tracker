@@ -38,7 +38,6 @@
     <div class="card mb-3 ">
       <h4 class="card-header">Comments</h4>
       <div class="card-body">
-
           <% lead.comments.forEach(comment => { %>
             <div class="mb-3 d-flex justify-content-start">
               <div>
@@ -50,7 +49,6 @@
               </div>
             </div>
           <% }) %>
-
         <form action="/leads/<%= lead._id %>/comments" method="POST" class="mb-3">
           <textarea name="content" id="" cols="60" rows="3" required></textarea>
           <div class="d-flex justify-content-end">
@@ -60,7 +58,6 @@
       </div>
     </div>
   </section>
-
 
 </main>
 

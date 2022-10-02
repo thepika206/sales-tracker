@@ -3,3 +3,11 @@
   text-decoration-thickness: 3px;
   font-weight: 600;
 }
+
+.navbar-brand {
+  font-size: 24px;
+}
+
+.nav-link {
+  font-size: 22px;
+}
