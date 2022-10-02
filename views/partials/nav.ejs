@@ -7,7 +7,7 @@
   <!-- <nav class="navbar navbar-expand-md bg-light mb-3"> -->
   <nav class="navbar mb-3 p-1">
     <% if (user) { %>
-      <a class="navbar-brand" href="/leads">Sales Tracker</a>
+      <a class="navbar-brand <%= title === 'My Leads'? "active-page" : "" %>" href="/">Sales Tracker</a>
       <a class="nav-link <%= title === 'My Leads'? "active-page" : "" %>" href="/leads/my-leads">My Leads</a>
       <a class="nav-link <%= title === 'Leads'? "active-page" : "" %>" href="/leads">Leads</a>
       <a class="nav-link <%= title === 'New Lead'? "active-page" : "" %>" href="/leads/new">New Lead</a>
