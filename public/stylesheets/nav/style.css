@@ -1,4 +1,4 @@
-.active-page {
+nav a.active-page {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   font-weight: 600;
@@ -7,11 +7,6 @@
 /* .navbar-brand {
   font-size: 24px;
   margin-left: 10px;
-}
-
-.nav-link {
-  margin: 6px 8px;
-  font-size: 18px;
 } */
 
 /* @media only screen and (max-width:649px) {
