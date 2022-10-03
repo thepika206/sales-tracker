@@ -108,7 +108,6 @@ function edit(req,res){
 }
 
 function update(req,res){
-
   Lead.findById(req.params.leadId)
   .then(lead => {
     if (lead.owner.equals(req.user.profile._id)){
@@ -174,19 +173,16 @@ function createComment(req,res){
 }
 
 function reportSales(req,res){
-  console.log('san check')
   Lead.find({
     owner: req.user.profile._id,
     value: { $gt:0 },
     status: 'Closed'
   })
   .then(leads => {
-    console.log(leads)
     let totalValue = 0
     leads.forEach((lead) => {
       totalValue += lead.value
     })
-    console.log('result', totalValue, leads.length)
     res.render('leads/sales', {
       title: 'My Sales',
       subtitle: 'My Closed Leads with Value greater than 0',
