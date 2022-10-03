@@ -24,9 +24,10 @@ body {
 main {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: ;
   flex-direction: column;
   background-color: white;
+  min-height: 80vh;
 }
 
 .right {

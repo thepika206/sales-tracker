@@ -2,7 +2,7 @@
 <%- include('./partials/nav') %>
 <main>
   <section>
-    <h1>Welcome to Sales Tracker, <%= user ? user.profile.name : "friend" %></h1>
+    <h1>Welcome to Sales Tracker <%= user ? user.profile.name : "" %></h1>
     <% if (user) { %>
       <h5>Navigate to <a href="/leads/new">New Lead</a> whenever you want to create a new lead.</h5>
       <img id="home-splash-image" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="person buttoning a suit jacket">
@@ -10,10 +10,7 @@
     <% } else { %>
       <h3>Get Started</h3>
       <p>Please click "Sign in with Google" on the upper right side</p>
-      <img id="home-splash-image" src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="two people having a business meeting outside">
-      <h5>Note:</h5>
-      <p>The Sales Tracker app will access your name, email, and profile avatar. </p>
-      <p>It will NOT access any documents, photos nor contacts</p>
+      <img id="home-splash-image" class="mb-3" src="https://images.unsplash.com/photo-1578574577315-3fbeb0cecdc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80" alt="two people having a business meeting outside">
     <% } %>
   </section>
 </main>
