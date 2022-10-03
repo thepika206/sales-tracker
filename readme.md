@@ -3,7 +3,9 @@
 - Sales Tracker is a Client Relationship Manager for sales agents to document their clients
 
 
-![screenshot](https://imgur.com/6hC4m8T "screenshot")
+![screenshot](https://i.imgur.com/6hC4m8T.png "screenshot")
+
+
 
 # Technologies
 - (MEN Stack)  MongoDb with Mongoose | Express.js | Node.js
