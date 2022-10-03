@@ -6,38 +6,37 @@
   <% if (subtitle === '(Open)') { %>
     <p><a href="/leads/my-leads">Include Closed Leads</a></p>
   <% } %>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Agent</th>
-        <th scope="col">Status</th>
-        <th scope="col">Value</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% if (leads.length > 0) { %>
-        <% leads.forEach((lead, idx) => { %>
-          <tr>
-            <th scope="row"><%= idx+1 %></th>
-            <td><a href="/leads/<%= lead._id %>"> <%= lead.name %> </a> </td>
-            <td><img src="<%= lead.owner.avatar %>" alt="" class="small-round-avatar"><%= lead.owner.name %></td>
-            <td><%= lead.status %></td>
-            <td>$<%= lead.value %></td>
-          </tr>
-        <% }) %>
-      <% } else { %>
+  <div class="container container-xl">
+    <table class="table table-striped ">
+      <thead>
         <tr>
-          <td></td>
-          <td colspan="4">You have no Leads - Please enter some <a href="/leads/new">New Leads</a></td>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Agent</th>
+          <th scope="col">Status</th>
+          <th scope="col">Value</th>
         </tr>
-      <% } %>
-    </tbody>
-  </table>
-        
-      
-
+      </thead>
+      <tbody>
+        <% if (leads.length > 0) { %>
+          <% leads.forEach((lead, idx) => { %>
+            <tr>
+              <th scope="row"><%= idx+1 %></th>
+              <td><a href="/leads/<%= lead._id %>"> <%= lead.name %> </a> </td>
+              <td><img src="<%= lead.owner.avatar %>" alt="" class="small-round-avatar"><%= lead.owner.name %></td>
+              <td><%= lead.status %></td>
+              <td>$<%= lead.value %></td>
+            </tr>
+          <% }) %>
+        <% } else { %>
+          <tr>
+            <td></td>
+            <td colspan="4">You have no Leads - Please enter some <a href="/leads/new">New Leads</a></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>
