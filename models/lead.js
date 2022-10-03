@@ -14,8 +14,8 @@ const commentSchema = new Schema({
 
 
 const leadSchema = new Schema({
-  name: {type: String, required: [true, 'name is required'] },
-  owner: { type: Schema.Types.ObjectId, ref: 'Profile' },
+  name: {type: String, required: true },
+  owner: { type: Schema.Types.ObjectId, ref: 'Profile', required: true },
   //basic setup for stubbing
   description: String,
   status: {

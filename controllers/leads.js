@@ -108,7 +108,7 @@ function edit(req,res){
 }
 
 function update(req,res){
-  
+
   Lead.findById(req.params.leadId)
   .then(lead => {
     if (lead.owner.equals(req.user.profile._id)){
