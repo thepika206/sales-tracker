@@ -9,6 +9,9 @@ const router = Router()
 
 //============routes==============
 
+// GET /leads/sales
+router.get('/sales', isLoggedIn, leadCtrl.reportSales)
+
 // GET /leads
 router.get('/', isLoggedIn, leadCtrl.index)
 
@@ -26,6 +29,7 @@ router.get('/:leadId', isLoggedIn, leadCtrl.show)
 
 // GET /leads/:leadId/edit
 router.get('/:leadId/edit', isLoggedIn, leadCtrl.edit)
+
 
 // POST /leads
 router.post('/', isLoggedIn, leadCtrl.create)

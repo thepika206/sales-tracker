@@ -1,0 +1,35 @@
+
+
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <h5><%= subtitle %></h5>
+
+  <div class="container container-xl">
+    <table class="table table-striped ">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Closed Leads</th>
+          <th scope="col">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (totalLeads > 0) { %>
+          <th scope="row">1</th>
+          <td><%= totalLeads %> </td>
+          <td><%= totalValue %> </td>
+        <% } else { %>
+          <tr>
+            <td></td>
+            <td colspan="4">No Leads to display </td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>

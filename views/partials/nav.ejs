@@ -26,6 +26,11 @@
               href="/leads/my-leads-open"
               >My Leads</a>
             <a 
+              aria-current="<%= title === 'Sales' ? 'page' : '' %>" 
+              class="nav-link" 
+              href="/leads/sales"
+              >Sales</a>
+            <a 
               aria-current="<%= title === 'Leads' ? 'page' : '' %>" 
               class="nav-link"
               href="/leads"

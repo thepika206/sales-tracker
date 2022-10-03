@@ -2,10 +2,15 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1><%= title %> <%= subtitle %></h1>
-  <% if (subtitle === '(Open)') { %>
-    <p><a href="/leads/my-leads">Include Closed Leads</a></p>
-  <% } %>
+  <h1><%= title %></h1>
+  <h5><%= subtitle %></h5>
+  <!-- Several filtered lead queries share this view -->
+    <% if (subtitle === '(Open)') { %>
+      <span><a href="/leads/my-leads">Include Closed Leads</a></span>
+    <% } else if (subtitle === '(All)') { %>
+      <span><a href="/leads/my-leads-open">Exclude Closed Leads</a></span>
+    <% } %>
+
   <div class="container container-xl">
     <table class="table table-striped ">
       <thead>

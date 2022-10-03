@@ -26,7 +26,7 @@ function indexMyLeads(req,res){
     res.render('leads/index', {
       leads: leads,
       title: 'My Leads',
-      subtitle: '(All-Statuses)',
+      subtitle: '(All)',
     })
   })
   .catch(err => {
@@ -173,6 +173,29 @@ function createComment(req,res){
   })
 }
 
+function reportSales(req,res){
+  console.log('san check')
+  Lead.find({
+    owner: req.user.profile._id,
+    value: { $gt:0 },
+    status: 'Closed'
+  })
+  .then(leads => {
+    console.log(leads)
+    let totalValue = 0
+    leads.forEach((lead) => {
+      totalValue += lead.value
+    })
+    console.log('result', totalValue, leads.length)
+    res.render('leads/sales', {
+      title: 'Sales',
+      subtitle: 'My Closed Leads with Value greater than 0',
+      totalLeads: leads.length,
+      totalValue: totalValue,
+    })
+  })
+}
+
 export {
   index,
   indexMyLeads,
@@ -184,4 +207,5 @@ export {
   update,
   deleteLead as delete,
   createComment,
+  reportSales
 }
