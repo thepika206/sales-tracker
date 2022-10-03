@@ -4,6 +4,15 @@ nav a.active-page {
   font-weight: 600;
 }
 
+
+/* #my-leads-nav, #leads-nav, #new-lead-nav {
+  color: white;
+} */
+
+#nav-links-group a {
+  color: white;
+}
+
 /* .navbar-brand {
   font-size: 24px;
   margin-left: 10px;
