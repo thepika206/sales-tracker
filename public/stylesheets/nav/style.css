@@ -1,11 +1,15 @@
 .nav-link[aria-current='page'] {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 
-#nav-links-group a {
+#nav-links-group > a {
+  color: white;
+}
+
+#nav-links-group > div > a {
   color: white;
 }
 

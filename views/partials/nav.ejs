@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="/stylesheets/nav/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-primary navbar-expand-sm mb-3 p-1">
+  <nav class="navbar navbar-dark bg-primary navbar-expand-md mb-3 p-1">
     <% if (user) { %>
       <div class="container-fluid">
         <a class="navbar-brand" href="/">Sales Tracker</a>
@@ -21,24 +21,30 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div id="nav-links-group" class="navbar-nav me-auto mb-2 mb-lg-0">
             <a 
-              aria-current="<%= title === 'My Leads' ? 'page' : '' %>" 
-              class="nav-link" 
-              href="/leads/my-leads-open"
-              >My Leads</a>
+              aria-current="<%= title === 'Leads' ? 'page' : '' %>" 
+              class="nav-link"
+              href="/leads"
+              >Leads
+            </a>
+            <div class="nav-item dropdown">
+              <a aria-current="<%= title === 'My Leads' ? 'page' : '' %>" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                >My Leads
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/leads/my-leads-open">Open Leads</a></li>
+                <li><a class="dropdown-item" href="/leads/my-leads">All Leads</a></li>
+              </ul>
+            </div>
             <a 
               aria-current="<%= title === 'My Sales' ? 'page' : '' %>" 
               class="nav-link" 
               href="/leads/sales"
-              >My Sales</a>
+              >My Sales
+            </a>
             <a 
-              aria-current="<%= title === 'Leads' ? 'page' : '' %>" 
-              class="nav-link"
-              href="/leads"
-              >Leads</a>
-            <a 
-              aria-current="<%= title === 'New Lead' ? 'page' : '' %>" 
-              class="nav-link"
-              href="/leads/new"
+            aria-current="<%= title === 'New Lead' ? 'page' : '' %>" 
+            class="nav-link"
+            href="/leads/new"
             >New Lead</a>
           </div>
           <div class="d-flex align-items-center">
