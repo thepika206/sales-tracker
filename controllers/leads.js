@@ -1,4 +1,5 @@
 import { Lead } from "../models/lead.js";
+import { Profile } from "../models/profile.js";
 
 function index(req,res){
   Lead.find({})
@@ -58,7 +59,6 @@ function show(req,res){
   .populate('owner')
   .populate('comments.author')
   .then(lead => {
-    // console.log(comments.author,'author???')
     res.render('leads/show',{
       lead: lead,
       title: `Lead Details for ${lead.name}`,
@@ -92,9 +92,13 @@ function edit(req,res){
   Lead.findById(req.params.leadId)
   .populate('owner')
   .then(lead => {
-    res.render('leads/edit',{
-      lead: lead,
-      title: `Edit ${lead.name}`,
+    Profile.find({})
+    .then(profiles => {
+      res.render('leads/edit',{
+        lead: lead,
+        title: `Edit ${lead.name}`,
+        profiles: profiles,
+      })
     })
   })
   .catch(err => {
@@ -104,6 +108,7 @@ function edit(req,res){
 }
 
 function update(req,res){
+  
   Lead.findById(req.params.leadId)
   .then(lead => {
     if (lead.owner.equals(req.user.profile._id)){

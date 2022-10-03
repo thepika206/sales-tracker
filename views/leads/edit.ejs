@@ -22,11 +22,20 @@
           <label class="form-label mb-3">Value ($)
             <input name="value" value="<%= lead.value %>" type="number" min="0" class="form-control" placeholder="Enter Amount" autocomplete="off">
           </label>
-          <h6 class="card-title"> Assigned Owner </h6>
+          <h6 class="card-title"> Assigned Owner</h6>
           <div class="mb-3 d-flex flex-row justify-content-start">
             <img src="<%= lead.owner.avatar %>" alt="" class="small-round-avatar">
             <p class="card-text"> <%= lead.owner.name %> </p>
           </div>
+          <label class="form-label mb-3"> Change Owner 
+            <select class="form-select" name="owner" id="">
+              <option value="<%= lead.owner.id %>" selected><%= lead.owner.name %> </option>
+              <% profiles.forEach(profile => { %>
+                <option value="<%= profile._id %>"><%= profile.name %></option>
+              <% }) %>
+              <option value=""></option>
+            </select>
+          </label>
           <label class="form-label mb-3">Description
             <textarea name="description" class="form-control" rows="3" placeholder="briefly describe the stated needs for the customer"><%= lead.description %></textarea>
           </label>
