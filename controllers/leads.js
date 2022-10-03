@@ -188,7 +188,7 @@ function reportSales(req,res){
     })
     console.log('result', totalValue, leads.length)
     res.render('leads/sales', {
-      title: 'Sales',
+      title: 'My Sales',
       subtitle: 'My Closed Leads with Value greater than 0',
       totalLeads: leads.length,
       totalValue: totalValue,
