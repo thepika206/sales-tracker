@@ -100,6 +100,10 @@ function edit(req,res){
         profiles: profiles,
       })
     })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
   })
   .catch(err => {
     console.log(err)
@@ -189,6 +193,10 @@ function reportSales(req,res){
       totalLeads: leads.length,
       totalValue: totalValue,
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
   })
 }
 
