@@ -1,43 +1,11 @@
 .nav-link[aria-current='page'] {
   text-decoration: underline;
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 2px;
   font-weight: 700;
 }
-/* nav a.active-page {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  font-weight: 600;
-} */
 
-
-/* #my-leads-nav, #leads-nav, #new-lead-nav {
-  color: white;
-} */
 
 #nav-links-group a {
   color: white;
 }
 
-/* .navbar-brand {
-  font-size: 24px;
-  margin-left: 10px;
-} */
-
-/* @media only screen and (max-width:649px) {
-  .navbar {
-    color: red;
-    justify-content: flex-end;
-  }
-  .navbar-brand {
-    font-size: 16px;
-    padding: 0;
-    margin: 5px 5px;
-  }
-  .nav-link {
-    padding: 0;
-    margin: 5px 5px;
-  }
-  nav img {
-    display: none;
-  }
-} */
