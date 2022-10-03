@@ -21,13 +21,6 @@ body {
 }
 
 
-
-.small-round-avatar {
-  border-radius: 50%;
-  width: 40px;
-  margin: 0 5px;;
-}
-
 main {
   display: flex;
   align-items: center;
@@ -59,5 +52,12 @@ section {
 }
 
 #home-splash-image{
-  height: 25vh;
+  height: 40vh;
+}
+
+
+.small-round-avatar {
+  border-radius: 50%;
+  width: 40px;
+  margin: 0 5px;;
 }
