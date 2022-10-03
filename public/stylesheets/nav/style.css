@@ -1,8 +1,13 @@
-nav a.active-page {
+.nav-link[aria-current='page'] {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  font-weight: 700;
+}
+/* nav a.active-page {
   text-decoration: underline;
   text-decoration-thickness: 3px;
   font-weight: 600;
-}
+} */
 
 
 /* #my-leads-nav, #leads-nav, #new-lead-nav {
