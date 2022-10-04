@@ -58,6 +58,12 @@ div.card {
   margin: 0 5px;;
 }
 
+.large-round-avatar {
+  border-radius: 50%;
+  width: 50px;
+  margin: 5px;;
+}
+
 #home-splash-image{
   width: 100%;
   max-width: 600px;

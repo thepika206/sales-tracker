@@ -84,6 +84,7 @@ function show(req,res){
     res.render('leads/show',{
       lead: lead,
       title: `Lead Details for ${lead.name}`,
+      commentsCount: lead.comments.length
     })
   })
   .catch(err => {

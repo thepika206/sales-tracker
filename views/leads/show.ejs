@@ -39,16 +39,22 @@
   </section>
   <section id="lead-details" class="container-sm">
     <div class="card mb-3 ">
-      <h4 class="card-header">Comments</h4>
+      <h4 class="card-header">Comments (<%= commentsCount%>) </h4>
       <div class="card-body">
           <% lead.comments.forEach(comment => { %>
             <div class="mb-3 d-flex justify-content-start">
               <div>
-                <img src="<%= comment.author.avatar %>" alt="" class="small-round-avatar">
+                <img src="<%= comment.author.avatar %>" alt="" class="large-round-avatar">
               </div>
-              <div class="ms-3">
-                <p><%= comment.content %></p>
-                <p>Posted by - <%= comment.author.name %> - <%= comment.createdAt %></p> 
+              <div class="card ">
+                <div class="card-body bg-light">
+                  <blockquote class="blockquote mb-0 fs-6">
+                    <p class=""><%= comment.content %></p>
+                    <footer class="blockquote-footer "><%= comment.author.name %> - <%= comment.createdAt %> </footer>
+                  </blockquote> 
+                </div>
+
+                
               </div>
             </div>
           <% }) %>
