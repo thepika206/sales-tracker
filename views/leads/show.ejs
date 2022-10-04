@@ -50,7 +50,7 @@
                 <div class="card-body bg-light">
                   <blockquote class="blockquote mb-0 fs-6">
                     <p class=""><%= comment.content %></p>
-                    <footer class="blockquote-footer "><%= comment.author.name %> - <%= comment.createdAt %> </footer>
+                    <footer class="blockquote-footer "><%= comment.author.name %> - <%= comment.createdAt.toLocaleString() %> </footer>
                   </blockquote> 
                 </div>
 
