@@ -2,7 +2,7 @@ import { Lead } from "../models/lead.js";
 import { Profile } from "../models/profile.js";
 
 function index(req,res){
-  Lead.find({})
+  Lead.find({}).sort({name: 1})
   .populate('owner')
   .then(leads => {
     res.render('leads/index', {
@@ -21,6 +21,7 @@ function indexMyLeads(req,res){
   Lead.find({
     owner: req.user.profile._id
   })
+  .sort({name: 1})
   .populate('owner')
   .then(leads => {
     res.render('leads/index', {
@@ -40,6 +41,7 @@ function indexMyLeadsOpen(req,res){
     owner: req.user.profile._id,
     status: ['New','Working',]
   })
+  .sort({name: 1})
   .populate('owner')
   .then(leads => {
     res.render('leads/index', {
