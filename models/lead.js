@@ -26,7 +26,7 @@ const leadSchema = new Schema({
   value: {
     type: Number,
     default: 0,
-    min: [0, 'value must be a postive amount'],
+    min: [0, 'value must be a positive number'],
   },
   comments: [commentSchema],
 }, {
