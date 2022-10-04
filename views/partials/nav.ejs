@@ -20,18 +20,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div id="nav-links-group" class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!-- <a 
-              aria-current="<%= title === 'Leads' ? 'page' : '' %>" 
-              class="nav-link"
-              href="/leads"
-              >Leads
-            </a> -->
             <div class="nav-item dropdown">
               <a aria-current="<%= title === ('Leads') ? 'page' : '' %>" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
                 >Leads
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/leads/my-leads-open" >My Leads (open)</a></li>
+                <li><a class="dropdown-item" href="/leads/my-leads-closed" >My Leads (closed)</a></li>
                 <li><a class="dropdown-item" href="/leads/my-leads" >My Leads (all)</a></li>
                 <li><a class="dropdown-item" href="/leads" >Leads (global)</a></li>
               </ul>

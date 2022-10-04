@@ -56,6 +56,26 @@ function indexMyLeadsOpen(req,res){
   })
 }
 
+function indexMyLeadsClosed(req,res){
+  Lead.find({
+    owner: req.user.profile._id,
+    status: ['Closed',]
+  })
+  .sort({name: 1})
+  .populate('owner')
+  .then(leads => {
+    res.render('leads/index', {
+      leads: leads,
+      title: 'Leads',
+      subtitle: 'My Leads (Closed)'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 function show(req,res){
   Lead.findById(req.params.leadId)
   .populate('owner')
@@ -206,6 +226,7 @@ export {
   index,
   indexMyLeads,
   indexMyLeadsOpen,
+  indexMyLeadsClosed,
   show,
   newLead as new,
   create,
