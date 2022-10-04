@@ -215,7 +215,7 @@ function reportSales(req,res){
       title: 'My Sales',
       subtitle: 'My Closed Leads with Value greater than 0',
       totalLeads: leads.length,
-      totalValue: totalValue,
+      totalValue: numberWithCommas(totalValue),
     })
   })
   .catch(err => {

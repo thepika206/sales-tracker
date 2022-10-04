@@ -23,7 +23,7 @@
               <td><a href="/leads/<%= lead._id %>"> <%= lead.name %> </a> </td>
               <td><img src="<%= lead.owner.avatar %>" alt="" class="small-round-avatar"><%= lead.owner.name %></td>
               <td><%= lead.status %></td>
-              <td>$<%= leadValue %></td>
+              <td>$<%= lead.value %></td>
             </tr>
           <% }) %>
         <% } else { %>
