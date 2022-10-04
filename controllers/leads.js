@@ -226,7 +226,7 @@ function reportSales(req,res){
 
 //Utility functions
 function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return (x > 0) ? x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : 0
 }
 export {
   index,
