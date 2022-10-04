@@ -23,7 +23,7 @@
               <td><a href="/leads/<%= lead._id %>"> <%= lead.name %> </a> </td>
               <td><img src="<%= lead.owner.avatar %>" alt="" class="small-round-avatar"><%= lead.owner.name %></td>
               <td><%= lead.status %></td>
-              <td>$<%= lead.value %></td>
+              <td>$<%= lead.value?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %></td>
             </tr>
           <% }) %>
         <% } else { %>
