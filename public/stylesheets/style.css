@@ -18,29 +18,15 @@ body {
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
   margin: 0;
+  min-height: 100vh;
 }
-
 
 main {
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: white;
-  min-height: 80vh;
-}
-
-.right {
-  margin-left: auto;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-div.card {
-  width: 100%;
-  max-width: 800px
+  /* min-height: 80vh; */
 }
 
 section {
@@ -51,14 +37,29 @@ section {
   align-items: center;
 }
 
-#home-splash-image{
-  width: 100%;
-  max-width: 600px;
+form {
+  display: flex;
+  flex-direction: column;
 }
 
+.right {
+  margin-left: auto;
+}
+
+
+div.card {
+  width: 100%;
+  max-width: 800px
+}
 
 .small-round-avatar {
   border-radius: 50%;
   width: 40px;
   margin: 0 5px;;
 }
+
+#home-splash-image{
+  width: 100%;
+  max-width: 600px;
+}
+
