@@ -1,6 +1,8 @@
 import { Lead } from "../models/lead.js";
 import { Profile } from "../models/profile.js";
 
+// Lead Index functions ====================================================
+
 function index(req,res){
   Lead.find({}).sort({name: 1})
   .populate('owner')
@@ -75,6 +77,8 @@ function indexMyLeadsClosed(req,res){
     res.redirect('/')
   })
 }
+
+// Other Lead functions ==========================================
 
 function show(req,res){
   Lead.findById(req.params.leadId)
@@ -180,6 +184,9 @@ function deleteLead(req,res){
   })
 }
 
+
+// Lead Comment function ========================================
+
 function createComment(req,res){
   req.body.author = req.user.profile._id
   Lead.findById(req.params.leadId)
@@ -199,6 +206,8 @@ function createComment(req,res){
     res.redirect('/')
   })
 }
+
+// Lead Report function ===========================================
 
 function reportSales(req,res){
   Lead.find({
@@ -224,10 +233,12 @@ function reportSales(req,res){
   })
 }
 
-//Utility functions
+//Utility functions====================================
 function numberWithCommas(x) {
   return (x > 0) ? x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : 0
 }
+
+//Export ===============================================
 export {
   index,
   indexMyLeads,
