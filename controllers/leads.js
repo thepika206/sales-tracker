@@ -118,7 +118,7 @@ function update(req,res){
       const opts = { runValidators: true }
       lead.updateOne(req.body, opts)
       .then(()=>{
-        res.redirect(`/leads/${req.params.leadId}`)
+        res.redirect(`/leads/my-leads-open`)
       })
       .catch(err => {
         console.log(err)

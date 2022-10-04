@@ -4,7 +4,7 @@
   <section>
     <h1>Welcome to Sales Tracker <%= user ? user.profile.name : "" %></h1>
     <% if (user) { %>
-      <h5>Go to <a href="/leads/new">New Lead</a> to enter a new client.</h5>
+      <h5>Go to <a href="/leads/my-leads-open">My Leads</a> to start working on your open Leads.</h5>
       <img id="home-splash-image" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="person buttoning a suit jacket">
       
     <% } else { %>
