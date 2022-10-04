@@ -10,7 +10,7 @@ const router = Router()
 //============routes==============
 
 // GET /leads/sales
-router.get('/sales', isLoggedIn, leadCtrl.reportSales)
+router.get('/my-sales', isLoggedIn, leadCtrl.reportMySales)
 
 // GET /leads
 router.get('/', isLoggedIn, leadCtrl.index)

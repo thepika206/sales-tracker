@@ -209,7 +209,7 @@ function createComment(req,res){
 
 // Lead Report function ===========================================
 
-function reportSales(req,res){
+function reportMySales(req,res){
   Lead.find({
     owner: req.user.profile._id,
     value: { $gt:0 },
@@ -221,8 +221,8 @@ function reportSales(req,res){
       totalValue += lead.value
     })
     res.render('leads/sales', {
-      title: 'My Sales',
-      subtitle: 'My Closed Leads with Value greater than 0',
+      title: 'Sales',
+      subtitle: 'My Sales (All Time)',
       totalLeads: leads.length,
       totalValue: numberWithCommas(totalValue),
     })
@@ -251,5 +251,5 @@ export {
   update,
   deleteLead as delete,
   createComment,
-  reportSales
+  reportMySales
 }
