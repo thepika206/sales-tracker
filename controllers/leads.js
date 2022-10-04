@@ -26,8 +26,8 @@ function indexMyLeads(req,res){
   .then(leads => {
     res.render('leads/index', {
       leads: leads,
-      title: 'My Leads',
-      subtitle: '(All)',
+      title: 'Leads',
+      subtitle: 'My Leads (All)',
     })
   })
   .catch(err => {
@@ -46,8 +46,8 @@ function indexMyLeadsOpen(req,res){
   .then(leads => {
     res.render('leads/index', {
       leads: leads,
-      title: 'My Leads',
-      subtitle: '(Open)'
+      title: 'Leads',
+      subtitle: 'My Leads (Open)'
     })
   })
   .catch(err => {
