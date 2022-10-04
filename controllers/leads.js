@@ -84,7 +84,8 @@ function show(req,res){
     res.render('leads/show',{
       lead: lead,
       title: `Lead Details for ${lead.name}`,
-      commentsCount: lead.comments.length
+      commentsCount: lead.comments.length,
+      leadValue: numberWithCommas(lead.value)
     })
   })
   .catch(err => {
@@ -223,6 +224,10 @@ function reportSales(req,res){
   })
 }
 
+//Utility functions
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 export {
   index,
   indexMyLeads,
