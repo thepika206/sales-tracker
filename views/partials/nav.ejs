@@ -31,12 +31,15 @@
                 <li><a class="dropdown-item" href="/leads" >Leads (global)</a></li>
               </ul>
             </div>
-            <a 
-              aria-current="<%= title === 'Sales' ? 'page' : '' %>" 
-              class="nav-link" 
-              href="/leads/my-sales"
-              >Sales
-            </a>
+            <div class="nav-item dropdown">
+              <a aria-current="<%= title === ('Leads') ? 'page' : '' %>" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                >Sales
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/leads/my-sales" >My Sales</a></li>
+                <li><a class="dropdown-item" href="/leads/sales" >Sales (global)</a></li>
+              </ul>
+            </div>
             <a 
             aria-current="<%= title === 'New Lead' ? 'page' : '' %>" 
             class="nav-link"
