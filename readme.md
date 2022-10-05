@@ -23,6 +23,8 @@
 
 # Icebox Features
 - Track Sources of leads to know which Sources are responsible for the most and best leads
+- Additional Reporting on Sales
+- API for lead import, default owner
 
 # Credits
 - By Patrick Cheung - pika206@gmail.com
