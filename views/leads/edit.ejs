@@ -11,7 +11,7 @@
           <label class="form-label mb-3">Name
             <input name="name" value="<%= lead.name %>" type="text" class="form-control" placeholder="John Doe" autocomplete="off">
           </label>
-          <label class="mb-3"> Status 
+          <label class="mb-3"> Status
             <select name="status" class="form-select" aria-label="Lead Status">
               <option value= "<%= lead.status %>" selected> <%= lead.status %> </option>
               <option value="New">New</option>
@@ -19,7 +19,7 @@
               <option value="Closed">Closed</option>
             </select>
           </label>
-          <label class="form-label mb-3">Value ($)
+          <label class="form-label mb-3">Value - counted in Sales when Status is Closed
             <input name="value" value="<%= lead.value %>" type="number" min="0" class="form-control" placeholder="Enter Amount" autocomplete="off">
           </label>
           <h6 class="card-title"> Assigned Owner</h6>

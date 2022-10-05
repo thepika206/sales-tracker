@@ -130,7 +130,7 @@ function edit(req,res){
     })
     .catch(err => {
       console.log(err)
-      res.redirect('/')
+      res.redirect('/leads')
     })
   })
   .catch(err => {
@@ -146,7 +146,7 @@ function update(req,res){
       const opts = { runValidators: true }
       lead.updateOne(req.body, opts)
       .then(()=>{
-        res.redirect(`/leads/my-leads-open`)
+        res.redirect(`/leads/${lead._id}`)
       })
       .catch(err => {
         console.log(err)
