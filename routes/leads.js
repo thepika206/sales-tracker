@@ -9,8 +9,6 @@ const router = Router()
 
 //============routes==============
 
-// GET /leads/sales
-router.get('/my-sales', isLoggedIn, leadCtrl.reportMySales)
 
 // GET /leads
 router.get('/', isLoggedIn, leadCtrl.index)
@@ -23,6 +21,9 @@ router.get('/my-leads-open', isLoggedIn, leadCtrl.indexMyLeadsOpen)
 
 // GET /leads/my-leads-closed
 router.get('/my-leads-closed', isLoggedIn, leadCtrl.indexMyLeadsClosed)
+
+// GET /leads/sales
+router.get('/my-sales', isLoggedIn, leadCtrl.reportMySales)
 
 // GET /leads/new
 router.get('/new', isLoggedIn, leadCtrl.new)

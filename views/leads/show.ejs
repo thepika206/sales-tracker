@@ -33,10 +33,10 @@
           <p class="card-text"> no description provided </p>
           <% } else { %>
             <p class="card-text"> <%= lead.description %> </p>
-            <% } %>
+          <% } %>
         <h6 class="card-title"> Lead Created At </h6>
         <p class="card-text"> <%= lead.createdAt.toLocaleString() %> </p>
-          </div>
+      </div>
     </div>
   </section>
   <section id="lead-details" class="container-sm">
@@ -54,9 +54,7 @@
                     <p class=""><%= comment.content %></p>
                     <footer class="blockquote-footer "><%= comment.author.name %> - <%= comment.createdAt.toLocaleString() %> </footer>
                   </blockquote> 
-                </div>
-
-                
+                </div>              
               </div>
             </div>
           <% }) %>
@@ -69,7 +67,6 @@
       </div>
     </div>
   </section>
-
 </main>
 
 <%- include('../partials/footer') %>
