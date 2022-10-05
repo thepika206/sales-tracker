@@ -9,6 +9,8 @@
 
 
 ![screenshot](https://i.imgur.com/6hC4m8T.png "screenshot")
+![screenshot](/public/images/st-intro-flow1.png "screenshot")
+
 
 
 # Technologies Used
