@@ -1,7 +1,7 @@
 import { Lead } from "../models/lead.js";
 import { Profile } from "../models/profile.js";
 
-// Lead Index functions ====================================================
+//* several Index functions, these variations allow for filtering by certain statuses, own vs all ===========
 
 function index(req,res){
   Lead.find({}).sort({name: 1})
@@ -78,7 +78,7 @@ function indexMyLeadsClosed(req,res){
   })
 }
 
-// Other Lead functions ==========================================
+//* New, Create, Show, Edit, Update and Delete functions ==========================================
 
 function show(req,res){
   Lead.findById(req.params.leadId)
@@ -185,7 +185,7 @@ function deleteLead(req,res){
 }
 
 
-// Lead Comment function ========================================
+//* Create Comments (embedded) function ========================================
 
 function createComment(req,res){
   req.body.author = req.user.profile._id
@@ -207,7 +207,7 @@ function createComment(req,res){
   })
 }
 
-// Lead Report function ===========================================
+//* Sold Leads (Closed with a Value) Report functions ===========================================
 
 function reportMySales(req,res){
   Lead.find({
@@ -262,7 +262,7 @@ function reportSales(req,res){
 }
 
 
-//Utility functions====================================
+//* Utility functions====================================
 function numberWithCommas(x) {
   return (x > 0) ? x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : 0
 }
