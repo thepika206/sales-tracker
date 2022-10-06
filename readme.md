@@ -9,11 +9,10 @@
 - [Getting Started](#getting-started)
 - [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
-  - [This app uses](#this-app-uses)
-  - [This app is hosted at](#this-app-is-hosted-at)
+    - [Hosting](#hosting)
 - [User Stories](#user-stories)
-  - [UX Considerations](#ux-considerations)
-  - [Accessibility Considerations](#accessibility-considerations)
+    - [UX Considerations](#ux-considerations)
+    - [Accessibility Considerations](#accessibility-considerations)
 - [Future Plans (Ice Box)](#future-plans-ice-box)
 - [About the Developer](#about-the-developer)
     - [Email and LinkedIn](#email-and-linkedin)
@@ -26,12 +25,11 @@
 - View and Comment on other user's Leads
 
 # Screenshots
-![screenshot](/public/images/st-intro-flow1.png "screenshot")
+![screenshot](/public/images/st-intro-flow.png "screenshot")
 
 ![screenshot](https://i.imgur.com/6hC4m8T.png "screenshot")
 
 # Technologies Used
-## This app uses
 - MongoDb with Mongoose 
 - Express.js | Node.js
 - HTML | CSS 
@@ -39,7 +37,7 @@
 - OAuth - Google
 - Bootstrap Frontend Framework
 
-## This app is hosted at
+### Hosting
 - [GitHub - sales-tracker](https://github.com/thepika206/sales-tracker)
 - [Fly.io - Click here to try the app](https://sales-tracker-pcheung.fly.dev/)
 
@@ -49,12 +47,12 @@
 - As a Sales Agent, I want to report on closed and sold leads so that can track my production
 - As a user of Sales Tracker, I want to login using Google so that I don't need to create separate login credentials for this application.
 
-## UX Considerations
+### UX Considerations
 - Access to data requires login
 - Update and Delete reserved for the creator of the data except for commenting
 - Status-based workflow
 
-## Accessibility Considerations
+### Accessibility Considerations
 - Mobile friendly design (Responsive layout
 - Accesible contrast on text
 - Text labels on all buttons and inputs 
