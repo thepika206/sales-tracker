@@ -14,6 +14,7 @@
     - [Accessibility Considerations](#accessibility-considerations)
 - [Future Plans (Ice Box)](#future-plans-ice-box)
 - [About the Developer](#about-the-developer)
+- [Something I enjoyed most about this Project](#something-i-enjoyed-most-about-this-project)
     - [Email and LinkedIn](#email-and-linkedin)
 
 
@@ -25,7 +26,6 @@
 
 # Screenshots
 ![screenshot](/public/images/st-intro-flow.png "screenshot")
-
 ![screenshot](/public/images/st-image-1.png "screenshot")
 ![screenshot](/public/images/st-image-2.png "screenshot")
 
@@ -63,6 +63,11 @@
 # About the Developer
 - I am a full-stack software developer with experience in Product Management and design.
 - I built Sales Tracker to apply my knowledge of business process systems into a MEN Stack application.
+
+# Something I enjoyed most about this Project
+- My app's needed several tables that were nearly the same, except filtering for different criteria.  That allowed me to reuse one index.ejs file for multiple routes.
+- ![screenshot](/public/images/st-code-snippet.png "screenshot")
+
 ### Email and LinkedIn
 - Patrick Cheung - pika206@gmail.com
 - Connect on [linkedIn](https://www.linkedin.com/in/patrick-cheung206/)
