@@ -1,10 +1,17 @@
 <a id='top'></a> 
 # About Sales Tracker
-- Sales Tracker is a Client Relationship Manager for sales agents to document their clients
-- [Click here to try the app](https://sales-tracker-pcheung.fly.dev/)
+- Sales Agents that work in "considered" purchases (major purchase like cars, loans, complex insurance policies) know that most deals do not close over a single phone call or email.  Therefore a Sales Agent can benefit from a system that manages all of their Lead relationships.  
+### Solution: Sales Tracker, a Client Relationship Management system or CRM.
+- [Launch Sales Tracker Now](https://sales-tracker-pcheung.fly.dev/)
+- Sales Tracker helps Sales Agents with the following jobs:
+  - Entering Lead information
+  - Tracking the status of the Lead as it moves from New to Closed
+  - Documentation of each interaction with the client, helping you know where you last left off.
+  - Reporting Sales Production
 
 # Table of Contents
 - [About Sales Tracker](#about-sales-tracker)
+    - [Solution: Sales Tracker, a Client Relationship Management system or CRM.](#solution-sales-tracker-a-client-relationship-management-system-or-crm)
 - [Table of Contents](#table-of-contents)
 - [Getting Started](#getting-started)
 - [Screenshots](#screenshots)
