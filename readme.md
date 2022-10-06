@@ -9,7 +9,6 @@
 - [Getting Started](#getting-started)
 - [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
-    - [Hosting](#hosting)
 - [User Stories](#user-stories)
     - [UX Considerations](#ux-considerations)
     - [Accessibility Considerations](#accessibility-considerations)
@@ -37,16 +36,14 @@
 - Javascript
 - OAuth - Google
 - Bootstrap Frontend Framework
-
-### Hosting
 - [GitHub - sales-tracker](https://github.com/thepika206/sales-tracker)
 - [Fly.io - Click here to try the app](https://sales-tracker-pcheung.fly.dev/)
 
 # User Stories
 - As a Sales Agent, I want to add and edit my active Leads so that I have a way to keep track of them
 - As a Sales Agent, I want to comment on Leads so all client communication is documented
-- As a Sales Agent, I want to report on closed and sold leads so that can track my production
-- As a user of Sales Tracker, I want to login using Google so that I don't need to create separate login credentials for this application.
+- As a Sales Agent, I want to report on closed and sold leads so that I can track my production
+- As a user of Sales Tracker, I want to login using Google so that I don't need to create a separate login for this application.
 
 ### UX Considerations
 - Access to data requires login
@@ -54,13 +51,13 @@
 - Status-based workflow
 
 ### Accessibility Considerations
-- Mobile friendly design (Responsive layout
+- Mobile friendly design (Responsive layout)
 - Accesible contrast on text
 - Text labels on all buttons and inputs 
   
 
 # Future Plans (Ice Box)
-- As a Sales Agent, I associate Leads with Sources so that I know where my sales are coming from 
+- As a Sales Agent, I want to associate Leads with Sources so that I know where my sales are coming from 
 - As a Sales Agent, I want an API for lead creation so that external systems can insert Leads into my system programatically.
 
 # About the Developer
