@@ -25,6 +25,9 @@ router.get('/my-leads-closed', isLoggedIn, leadCtrl.indexMyLeadsClosed)
 // GET /leads/my-sales
 router.get('/my-sales', isLoggedIn, leadCtrl.reportMySales)
 
+// GET /leads/sales
+router.get('/sales', isLoggedIn, leadCtrl.reportSales)
+
 // GET /leads/new
 router.get('/new', isLoggedIn, leadCtrl.new)
 

@@ -233,6 +233,35 @@ function reportMySales(req,res){
   })
 }
 
+//find all closed leads, create an tally object {name:total-lead-value}
+function reportSales(req,res){
+  Lead.find({
+    value: { $gt:0 },
+    status: 'Closed'
+  }, 'owner value status')
+  .populate('owner','name')
+  .then(leads=>{
+    let results = {}
+    leads.forEach(lead =>{
+      if (!results[lead.owner.name]){
+        results[lead.owner.name] = lead.value
+      } else {
+        results[lead.owner.name] += lead.value
+      }
+    })
+    res.render('leads/sales-by-agent', {
+      title: 'Sales',
+      subtitle: 'Sales (Global)',
+      sales: results,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+
 //Utility functions====================================
 function numberWithCommas(x) {
   return (x > 0) ? x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : 0
@@ -251,5 +280,6 @@ export {
   update,
   deleteLead as delete,
   createComment,
-  reportMySales
+  reportMySales,
+  reportSales
 }
