@@ -64,6 +64,7 @@
 
 # About the Developer
 - I am a full-stack software developer with experience in Product Management and design.
+- I built Sales Tracker to apply my knowledge of business process systems into a MEN Stack application.
 ### Email and LinkedIn
 - Patrick Cheung - pika206@gmail.com
 - Connect on [linkedIn](https://www.linkedin.com/in/patrick-cheung206/)
