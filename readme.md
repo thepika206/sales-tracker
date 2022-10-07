@@ -1,4 +1,4 @@
-<a id='top'></a> 
+
 # About Sales Tracker
 - Sales Agents that work in "considered" purchases (major purchase like cars, loans, complex insurance policies) know that most deals do not close over a single phone call or email.  Therefore a Sales Agent can benefit from a system that manages all of their Lead relationships.  
 ### Solution: Sales Tracker, a Client Relationship Management system or CRM.
@@ -21,7 +21,7 @@
     - [UX Considerations](#ux-considerations)
     - [Accessibility Considerations](#accessibility-considerations)
 - [Future Plans (Ice Box)](#future-plans-ice-box)
-- [About the Developer](#about-the-developer)
+- [Why did I choose to build this?](#why-did-i-choose-to-build-this)
 - [Something I enjoyed most about this Project](#something-i-enjoyed-most-about-this-project)
     - [Email and LinkedIn](#email-and-linkedin)
 
@@ -48,9 +48,9 @@
 - [Fly.io - Click here to try the app](https://sales-tracker-pcheung.fly.dev/)
 
 # User Stories
-- As a Sales Agent, I want to add and edit my active Leads so that I have a way to keep track of them
-- As a Sales Agent, I want to comment on Leads so all client communication is documented
-- As a Sales Agent, I want to report on closed and sold leads so that I can track my production
+- As a Sales Agent, I want to add and edit my active Leads so that I have a way to keep track of them.
+- As a Sales Agent, I want to comment on Leads so all client communication is documented.
+- As a Sales Agent, I want to report on closed and sold leads so that I can track my production.
 - As a user of Sales Tracker, I want to login using Google so that I don't need to create a separate login for this application.
 ### Planning diagrams
 ![Entity Relationship Diagram](/public/images/st-erd.png "Entity Relationship Diagram")
@@ -69,12 +69,13 @@
   
 
 # Future Plans (Ice Box)
-- As a Sales Agent, I want to associate Leads with Sources so that I know where my sales are coming from 
+- As a Sales Agent, I want to associate Leads with Sources so that I know where my sales are coming from.
 - As a Sales Agent, I want an API for lead creation so that external systems can insert Leads into my system programatically.
 
-# About the Developer
-- I am a full-stack software developer with experience in Product Management and design.
-- I built Sales Tracker to apply my knowledge of business process systems into a MEN Stack application.
+# Why did I choose to build this?
+- I am creating Sales Tracker as individual project for professional training at General Assembly.
+- It demonstrates full CRUD in a realistic application that requires login, and reserves permission to modify data to the user that created it.
+- Prior to becoming a developer, I worked on several CRMs as Product Owner. It was rewarding to bring that expertise into this project.
 
 # Something I enjoyed most about this Project
 - My app's needed several tables that were nearly the same, except filtering for different criteria.  That allowed me to reuse one index.ejs file for multiple routes.
