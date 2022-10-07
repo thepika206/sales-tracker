@@ -17,7 +17,8 @@
 - [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
 - [User Stories](#user-stories)
-- [Planning diagrams](#planning-diagrams)
+- [Project Plan on Trello](#project-plan-on-trello)
+    - [Planning diagrams](#planning-diagrams)
     - [UX Considerations](#ux-considerations)
     - [Accessibility Considerations](#accessibility-considerations)
 - [Future Plans (Ice Box)](#future-plans-ice-box)
@@ -52,7 +53,10 @@
 - As a Sales Agent, I want to comment on Leads so all client communication is documented.
 - As a Sales Agent, I want to report on closed and sold leads so that I can track my production.
 - As a user of Sales Tracker, I want to login using Google so that I don't need to create a separate login for this application.
-# Planning diagrams
+
+# Project Plan on Trello
+[View Trello Board](https://trello.com/b/eKkBHh2W/sales-tracker-planning)
+### Planning diagrams
 ![Entity Relationship Diagram](/public/images/st-erd.png "Entity Relationship Diagram")
 ![Low-Res Mockup](/public/images/st-planning-image.png "Low-Res Mockup")
 
