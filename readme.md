@@ -16,6 +16,7 @@
 - [Getting Started](#getting-started)
 - [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
+- [Credits](#credits)
 - [User Stories](#user-stories)
 - [Project Plan on Trello](#project-plan-on-trello)
     - [Planning diagrams](#planning-diagrams)
@@ -47,6 +48,10 @@
 - Bootstrap Frontend Framework
 - [GitHub - sales-tracker](https://github.com/thepika206/sales-tracker)
 - [Fly.io - Click here to try the app](https://sales-tracker-pcheung.fly.dev/)
+
+# Credits
+- Bootstrap CSS library
+- favicon.io
 
 # User Stories
 - As a Sales Agent, I want to add and edit my active Leads so that I have a way to keep track of them.
