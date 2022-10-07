@@ -1,6 +1,6 @@
 
 # About Sales Tracker
-- Sales Agents that work in "considered" purchases (major purchase like cars, loans, complex insurance policies) know that most deals do not close over a single phone call or email.  Therefore a Sales Agent can benefit from a system that manages all of their Lead relationships.  
+  Sales Agents that work in "considered" purchases (major purchase like cars, loans, complex insurance policies) know that most deals do not close over a single phone call or email.  Therefore a Sales Agent can benefit from a system that manages all of their Lead relationships.  
 ### Solution: Sales Tracker, a Client Relationship Management system or CRM.
 - [Launch Sales Tracker Now](https://sales-tracker-pcheung.fly.dev/)
 - Sales Tracker helps Sales Agents with the following jobs:
@@ -17,13 +17,13 @@
 - [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
 - [User Stories](#user-stories)
-    - [Planning diagrams](#planning-diagrams)
+- [Planning diagrams](#planning-diagrams)
     - [UX Considerations](#ux-considerations)
     - [Accessibility Considerations](#accessibility-considerations)
 - [Future Plans (Ice Box)](#future-plans-ice-box)
 - [Why did I choose to build this?](#why-did-i-choose-to-build-this)
 - [Something I enjoyed most about this Project](#something-i-enjoyed-most-about-this-project)
-    - [Email and LinkedIn](#email-and-linkedin)
+- [Contact Information](#contact-information)
 
 
 # Getting Started
@@ -52,7 +52,7 @@
 - As a Sales Agent, I want to comment on Leads so all client communication is documented.
 - As a Sales Agent, I want to report on closed and sold leads so that I can track my production.
 - As a user of Sales Tracker, I want to login using Google so that I don't need to create a separate login for this application.
-### Planning diagrams
+# Planning diagrams
 ![Entity Relationship Diagram](/public/images/st-erd.png "Entity Relationship Diagram")
 ![Low-Res Mockup](/public/images/st-planning-image.png "Low-Res Mockup")
 
@@ -78,9 +78,9 @@
 - Prior to becoming a developer, I worked on several CRMs as Product Owner. It was rewarding to bring that expertise into this project.
 
 # Something I enjoyed most about this Project
-- My app's needed several tables that were nearly the same, except filtering for different criteria.  That allowed me to reuse one index.ejs file for multiple routes.
-- ![screenshot](/public/images/st-code-snippet.png "screenshot")
+I needed several tables to display leads filtered in various ways, by status, who they belonged to.  I was able to reuse code to more simply pass the needed data to the frontend, including changing the title message to explain what the data was about.
+![screenshot](/public/images/st-code-snippet.png "screenshot")
 
-### Email and LinkedIn
+# Contact Information
 - Patrick Cheung - pika206@gmail.com
 - Connect on [linkedIn](https://www.linkedin.com/in/patrick-cheung206/)
