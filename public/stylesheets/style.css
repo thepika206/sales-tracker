@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: lightseagreen;
   color: #444;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -25,7 +25,7 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: white;
+  background-color: lightseagreen;
 }
 
 section {
@@ -68,3 +68,6 @@ div.card {
   max-width: 600px;
 }
 
+.white-table{
+  background-color: white;
+}
