@@ -7,11 +7,15 @@
     <div class="card mb-3">
       <h4 class="card-header">Lead Information</h4>
       <div class="card-body">
-        <form action="/leads" method="POST">
+        <form action="/leads" method="POST" autocomplete="off">
           <!-- Lead Name -->
           <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input name="name" required type="text" class="form-control" id="name" placeholder="Full Name" autocomplete="off">
+            <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" autocomplete="off" required>
+          </div>
+          <div class="mb-3">
+            <label for="email"> Email</label>
+            <input type="text" name="email" class="form-control" id="email" placeholder="Email Address" autocomplete="off">
           </div>
           <label class="mb-3"> Status (Choose Closed if Lead is already sold)
             <select name="status" class="form-select" aria-label="Lead Status">

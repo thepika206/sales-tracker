@@ -15,6 +15,11 @@ const commentSchema = new Schema({
 
 const leadSchema = new Schema({
   name: {type: String, required: true },
+  email: {
+    type: String,
+    trim: true,
+    lowercase: true,
+  },
   owner: { type: Schema.Types.ObjectId, ref: 'Profile', required: true },
   description: String,
   status: {

@@ -11,6 +11,10 @@
           <label class="form-label mb-3">Name
             <input name="name" value="<%= lead.name %>" type="text" class="form-control" placeholder="John Doe" autocomplete="off">
           </label>
+          <div class="mb-3">
+            <label for="email"> Email</label>
+            <input type="text" name="email" value="<%= lead.email %>"  class="form-control" id="email" placeholder="Email Address" autocomplete="off">
+          </div>
           <label class="mb-3"> Status - (to indicate sale, select Closed and enter Value)
             <select name="status" class="form-select" aria-label="Lead Status">
               <option value= "<%= lead.status %>" selected> <%= lead.status %> </option>
