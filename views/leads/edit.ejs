@@ -4,7 +4,7 @@
 <main>
   <h1> <%= title %>  </h1>
   <section id="lead-details" class="container-sm">
-    <div class="card mb-3 ">
+    <div class="card mb-3 shadow">
       <h4 class="card-header">Lead Information - <%= lead.name %> </h4>
       <div class="card-body">
         <form action="/leads/<%= lead._id %>?_method=PUT" method="POST">

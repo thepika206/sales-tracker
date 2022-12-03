@@ -4,7 +4,7 @@
 <main>
   <h1 class="mb-3"> <%= title %>  </h1>
   <section id="lead-details" class="container-sm">
-    <div class="card mb-3 ">
+    <div class="card mb-3 shadow">
       <h4 class="card-header">Lead Information</h4>
       <div class="card-body">
         <% if (lead.owner.equals(user?.profile.id)) { %>   
@@ -42,7 +42,7 @@
     </div>
   </section>
   <section id="lead-details" class="container-sm">
-    <div class="card mb-3 ">
+    <div class="card mb-3 shadow">
       <h4 class="card-header">Comments (<%= commentsCount%>) </h4>
       <div class="card-body">
           <% lead.comments.forEach(comment => { %>
