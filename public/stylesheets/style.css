@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: lightseagreen;
+  background-color: white;
   color: #444;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -25,7 +25,7 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: lightseagreen;
+  background-color: white;
 }
 
 section {
